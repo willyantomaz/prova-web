@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
           paginator.appendChild(li);
         }
       } else {
-        for (let i = Number(currentPage) - 4; i <= Number(currentPage) + 5; i++) {
+        for (let i = Number(currentPage) - 5; i <= Number(currentPage) + 4; i++) {
           const li = document.createElement("li");
           if (i == currentPage) li.classList.add("active");
           li.classList.add("page-item");

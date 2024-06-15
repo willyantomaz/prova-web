@@ -1,1 +1,104 @@
 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div id="overlay"></div>
+
+    <dialog id="filter-dialog">
+      <div>
+        <button onclick="toggleFilter()">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#ff0000"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-x"
+          >
+            <path d="M18 6 6 18" />
+            <path d="m6 6 12 12" />
+          </svg>
+        </button>
+        <form>
+          <div class="grid-filters">
+            <div>
+              <div class="filter-area">
+                <label for="filter-type">Tipo:</label>
+                <select id="filter-type">
+                  <option value="">Selecione:</option>
+                  <option value="noticia">Notícia</option>
+                  <option value="release">Release</option>
+                </select>
+              </div>
+              <div class="filter-area">
+                <label for="qtd-filter">Quantidade:</label>
+                <select class="input-dialog" id="qtd-filter">
+                  <option selected value="10">10 Notícias</option>
+                  <option value="15">15 Notícias</option>
+                  <option value="20">20 Notícias</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <div class="filter-area">
+                <label for="filter-start">De:</label>
+                <input class="input-dialog" type="date" id="filter-start" />
+              </div>
+              <div class="filter-area">
+                <label for="filter-end">Até:</label>
+                <input class="input-dialog" type="date" id="filter-end" />
+              </div>
+            </div>
+          </div>
+          <button id="filter-button" type="button">Aplicar</button>
+        </form>
+      </div>
+    </dialog>
+
+    <header>
+      <h1 class="text-white">Portal de Notícias do IBGE</h1>
+      <div class="d-flex align-items-center w-50">
+        <form id="search-form" class="w-100 d-flex align-items-center">
+          <div class="w-100">
+            <input
+              type="text"
+              name="search"
+              id="search"
+              placeholder="Pesquisar"
+              class="form-control"
+            />
+            <button class="btn" type="button" id="search-button">🔍</button>
+          </div>
+        </form>
+        <svg
+          id="filter-icon"
+          onclick="toggleFilter()"
+          width="20"
+          height="20"
+          fill="#f0f0f0"
+          viewBox="0 0 80 90"
+          focusable="false"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="m 0,0 30,45 0,30 10,15 0,-45 30,-45 Z"></path>
+        </svg>
+      </div>
+    </header>
+    <main>
+      <ul id="news-list"></ul>
+      <div id="paginator"></div>
+    </main>
+    <footer>Rodapé</footer>
+    <script src="index.js"></script>
+  </body>
+</html>

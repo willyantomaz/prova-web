@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+header, footer {
+    background-color: #4682b4;
+}
+
+main {
+    margin: 0 auto;
+    background-color: #f0f0f0;
+}
+
+main ul {
+    width: 100ch;
+    margin: 0 auto;
+}
+
+.text-white {
+    color: #fff;
+}
+
+#search-form {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+#search-button {
+    position: absolute;
+}
+
+.btn {
+    background-color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #f0f0f0;
+}
+
+.form-control {
+    padding: 0.5rem;
+    width: 100%;
+    border: 1px solid #fff;
+}
+
+#filter-icon {
+    position: absolute;
+    right: 1rem;
+    cursor: pointer;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.w-100 {
+    width: 100% !important;
+}
+
+.h-1 {
+    height: 1rem;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.gap-1 {
+    gap: 1rem;
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.news-item {
+    display: grid;
+    align-items: center;
+    gap: 1rem;
+    grid-template-columns: 1fr 2fr;
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+}
+
+.see-more-btn {
+    background-color: #dedede;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.see-more-btn:hover {
+    background-color: #ccc;
+}
+
+.see-more-btn a {
+    color: #000;
+    text-decoration: none;
+}
+
+.img-news-area {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.img-news-area img {
+    width: 100%;
+}
+
+#paginator {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+#paginator li {
+    list-style: none;
+
+}
+
+#paginator li button {
+    background-color: transparent;
+    border: none;
+}
+
+#paginator li a {
+    background-color: #4682b4;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+}
+
+#paginator li a:hover {
+    background-color: #3a7aa0;
+}
+
+#paginator li.active a {
+    background-color: #4682b4;
+}
+
+#filter-dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 1rem;
+    z-index: 2;
+    width: 50%;
+}
+
+.grid-filters {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (max-width: 760px) {
+    #filter-dialog {
+        width: 80%;
+    }
+
+    .grid-filters {
+        grid-template-columns: 1fr;
+    }
+}
+
+#filter-button {
+    margin-top: 0.5rem;
+    background-color: #4682b4;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+}
+
+.filter-area {
+    padding: 5px 0;
+}
